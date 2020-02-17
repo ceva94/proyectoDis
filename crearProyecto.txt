@@ -1,0 +1,3 @@
+mvn -B archetype:generate -DarchetypeGroupId=org.apache.maven.archetypes -DgroupId=org.example.basicapp -DartifactId=aplicacion
+
+mvn archetype:generate -B -DarchetypeGroupId=pl.org.miki -DarchetypeArtifactId=java8-quickstart-archetype -DarchetypeVersion=1.0.0 -DgroupId=com.example.lambda -DartifactId=convertidorAudio -Dversion=1.0 -Dpackage=com.example.lambda

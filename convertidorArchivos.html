@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="convertidor de archivos">
+		<meta name="author" content="Carlos Veintemilla">
+		<title>Convertidor</title>
+		
+		<link href="css/estilo.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+		<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+		<script src="js/script.js"></script>
+	</head>
+	
+	<body>
+		<div class="container-fluid centrar">
+			<div>
+				<h1>Convertidor de archivos</h1>
+				<h2>Seleccion un tipo de archivo</h2>
+				<div class="form-group col-md-3 centrar">
+				  <label for="tipo">State</label>
+				  <select id="tipo" class="form-control">
+					<option value="0">...</option>
+					<option value="1">Imagen</option>
+					<option value="2">Audio</option>
+					<option value="3">Video</option>
+				  </select>
+				</div>
+				<div id="convertidores" class= "container-fluid">
+					<div id="convertidorImagen" class="container centrar">
+						<h3>Suba una imagen</h3>
+						<div id="preview" class ="centrar">
+							<button type="button" class="btn btn-secondary" id="file-select">
+								Elegir archivo
+							</button>
+							<img src="https://www.colores.org.es/imagenes_colores/gris-claro.jpg" 
+							alt="Subir imagen" id="imagen"> </img>
+						</div>
+						<div style="width: 400px;" class="centrar">
+							<span class="alert alert-info" id="file-info" style="word-wrap: break-word;">No hay archivo aun</span>
+							<input type="file" name="file" id="cargarImagen" />
+							<form class="form-inline">
+								<label class="my-1 mx-auto" for="formatoImagen">Seleccione</label>
+								<select class="custom-select my-1 mx-auto" id="formatoImagen">
+									<option value="gif">GIF</option>
+									<option value="jpg">JPG</option>
+									<option value="bmp">BMP</option>
+									<option value="png">PNG</option>
+									<option value="jpeg">JPEG</option>
+								</select>
+							</form>
+							<button class="btn btn-primary convertir" id="convertirImagen">Convertir</button>
+						</div>
+						
+					</div>
+					<div id="convertidorAudio" class="container">
+						<h3>Suba una Audio</h3>
+						<div id="preview3" class ="centrar">
+							<audio id="audio" controls style="width: 300px;"></audio>
+							<button type="button" class="btn btn-secondary" id="file-select3">
+								Elegir archivo
+							</button>
+						</div>
+						<div style="width: 400px;" class="centrar">
+							<span class="alert alert-info" id="file-info3" style="word-wrap: break-word;">No hay archivo aun</span>
+							<input type="file" name="file" id="cargarAudio" />
+							<form class="form-inline">
+								<label class="my-1 mx-auto" for="formatoAudio">Seleccione</label>
+								<select class="custom-select my-1 mx-auto" id="formatoAudio">
+									<option value="mp3">MP3</option>
+									<option value="ogg">OGG</option>
+									<option value="wav">WAV</option>
+								</select>
+							</form>
+							<button class="btn btn-primary convertir" id="convertirAudio">Convertir</button>
+						</div>
+			
+					</div>
+					<div id="convertidorVideo" class="container">
+						<h3>Suba una Video</h3>
+						<div id="preview2" class ="centrar">
+							<video controls class="img-responsive" id="video" src="#">
+							</video>
+							<button type="button" class="btn btn-secondary" id="file-select2">
+								Elegir archivo
+							</button>
+						</div>
+						<div style="width: 400px;" class="centrar">
+							<span class="alert alert-info" id="file-info2" style="word-wrap: break-word;">No hay archivo aun</span>
+							<input type="file" name="file" id="cargarVideo" />
+							<form class="form-inline">
+								<label class="my-1 mx-auto" for="formatoVideo">Seleccione</label>
+								<select class="custom-select my-1 mx-auto" id="formatoVideo">
+									<option value="mp4">MP4</option>
+									<option value="webm">WEBM</option>
+									<option value="flv">FLV</option>
+								</select>
+							</form>
+							<button class="btn btn-primary convertir" id="convertirVideo">Convertir</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>

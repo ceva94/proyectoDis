@@ -1,0 +1,65 @@
+.centrar{
+	margin: 10px auto ;
+	text-align: center ;
+}
+
+#preview{
+	margin: 0 auto;
+	margin-bottom: 10px;
+	position: relative;
+	width:300px;
+}
+
+#preview button{
+	position: absolute;
+	margin-left:auto;
+	margin-right:auto;
+	left:0;
+	right:0;
+	bottom: 0;
+	display: none;
+}
+
+#preview img{
+	max-height: 300px;
+	max-width: 300px;
+}
+
+#preview2{
+	margin: 0 auto;
+	margin-bottom: 10px;
+	position: relative;
+}
+
+#preview2 button, #preview3 button {
+	display: block;
+	margin-left:auto;
+	margin-right:auto;
+	left:0;
+	right:0;
+	bottom: 0;
+}
+
+#preview2 video{
+	max-height: 300px;
+	max-width: 300px;
+}
+
+#file-info ,#file-info2,#file-info3{
+	display:block;
+}
+
+input#cargarImagen, input#cargarVideo , input#cargarAudio{
+	position:absolute;
+	visibility:hidden;
+	width:0;
+	z-index:9999;
+}
+
+.convertir{
+	width:400px;
+}
+
+#convertidorImagen, #convertidorAudio, #convertidorVideo{
+	display: none;
+}
